@@ -1,0 +1,32 @@
+import numpy as np
+
+days = 30
+temperature = np.random.randint(0, 50, size=days)
+humidity = np.random.randint(30, 90, size=days)
+rainfall = np.random.randint(0, 200, size=days)
+
+avg_temp = np.mean(temperature)
+min_temp = np.min(temperature)
+max_temp = np.max(temperature)
+
+avg_humidity = np.mean(humidity)
+min_humidity = np.min(humidity)
+max_humidity = np.max(humidity)
+
+total_rainfall = np.sum(rainfall)
+rainy_days = np.count_nonzero(rainfall > 0)  # Days with any rainfall
+
+print("Weather Data Analysis for the Month:\n")
+print(f"Temperature (°C):")
+print(f"  Average: {avg_temp:.2f}")
+print(f"  Minimum: {min_temp}")
+print(f"  Maximum: {max_temp}\n")
+
+print(f"Humidity (%):")
+print(f"  Average: {avg_humidity:.2f}")
+print(f"  Minimum: {min_humidity}")
+print(f"  Maximum: {max_humidity}\n")
+
+print(f"Rainfall (mm):")
+print(f"  Total: {total_rainfall}")
+print(f"  Rainy Days: {rainy_days} / {days}\n")
